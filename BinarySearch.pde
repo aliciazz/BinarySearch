@@ -45,15 +45,15 @@ public int binarySearch(int catNumToFind)
 }
 public int binarySearch(int catNumToFind,int nLow, int nHigh)
 {
-  if(nlow>nhigh)
+  if(nLow>nHigh)
   return -1;
-  int guess = (nlow+nhigh)/2;
+  int guess = (nLow+nHigh)/2;
   if(store[guess].getCatNum() == catNumToFind)
   return store[guess].getInventory();
   else if(store[guess].getCatNum()<catNumToFind)
-  return binarySearch(catNumToFind, nlow+1, nHigh);
+  return binarySearch(catNumToFind, nLow+1, nHigh);
   else 
-  return binarySearch(catNumToFind, nLow, nhigh-1);           
+  return binarySearch(catNumToFind, nLow, nHigh-1);           
 }
 public void setup()
 {
@@ -98,8 +98,3 @@ public void draw()
 {
     //empty!
 }
-
-
-
-
-
